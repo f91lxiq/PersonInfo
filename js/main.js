@@ -27,7 +27,6 @@ function replaceWord(mapDate) {
 
 function checkStatus(showtype) {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-
         data = JSON.parse(xmlHttp.responseText);
         replaceWord(data);
     } else {
