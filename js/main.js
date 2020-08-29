@@ -30,6 +30,5 @@ function checkStatus(showtype) {
         data = JSON.parse(xmlHttp.responseText);
         replaceWord(data);
     } else {
-
     }
 }
