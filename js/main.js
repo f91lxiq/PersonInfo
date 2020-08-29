@@ -20,18 +20,17 @@ function showExp() {
 function replaceWord(mapDate) {
     var replaceDatas = document.getElementsByClassName("dataTeyp");
     var tempData;
-    [].forEach.call(replaceDatas, function(el) {
-        el.innerHTML = el.innerHTML.replace(el.innerHTML,mapDate[el.innerHTML]);
-      });
+    [].forEach.call(replaceDatas, function (el) {
+        el.innerHTML = el.innerHTML.replace(el.innerHTML, mapDate[el.innerHTML]);
+    });
 }
 
 function checkStatus(showtype) {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
- 
+
         data = JSON.parse(xmlHttp.responseText);
         replaceWord(data);
-        
     } else {
-        
+
     }
 }
