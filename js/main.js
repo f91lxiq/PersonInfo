@@ -13,6 +13,7 @@ function showExp(lengDiv) {
     }
     xmlHttp.onreadystatechange = checkStatus;
     xmlHttp.open("GET", "https://f91lxiq.github.io/PersonInfo/data/title."+ lengDiv + ".json", true);
+    // xmlHttp.open("GET", "/data/title."+ lengDiv + ".json", true);
     xmlHttp.send(null);
 }
 
@@ -20,11 +21,12 @@ function replaceWord(mapDate) {
     var replaceDatas = document.getElementsByClassName("dataTeyp");
     var tempData;
     [].forEach.call(replaceDatas, function (el) {
-        el.innerHTML = el.innerHTML.replace(el.innerHTML, mapDate[el.innerHTML]);
+        // alert(el.getAttribute("DataKey"));
+        el.innerHTML = mapDate[el.getAttribute("DataKey")];
     });
 }
 
-function checkStatus(showtype) {
+function checkStatus() {
     if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
         data = JSON.parse(xmlHttp.responseText);
         replaceWord(data);

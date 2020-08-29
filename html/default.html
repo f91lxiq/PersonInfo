@@ -6,19 +6,23 @@
     <meta http-equiv="Content-Type" Content="text/html;charset=Shift_JIS">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta charset="UTF-8">
-    <title class="dataTeyp">person_exp</title>
-    <!-- <script type="text/javascript" src="https://f91lxiq.github.io/PersonInfo/js/main.js"></script> -->
-    <script type="text/javascript" src="/js/main.js"></script>
+    <title class="dataTeyp" DataKey="person_exp" ></title>
+    <script type="text/javascript" src="https://f91lxiq.github.io/PersonInfo/js/main.js"></script>
+    <!-- <script type="text/javascript" src="/js/main.js"></script> -->
 </head>
 
 <body onload="showExp(0)"> 
-    <h1 class="dataTeyp">person_exp</h1>
+    <h1 class="dataTeyp" DataKey="person_exp"></h1>
+    <div class="dataTeyp" DataKey="name"></div>
+    <div style="display: flex">
+    <div class="dataTeyp" DataKey="person_leg"></div> 
+    <select onchange="showExpBySelect(this)"> 
+        <option value="0">日本語</option>
+        <option value="1">汉语</option>
+    </select>
+</div>
     <form>
-        <div class="dataTeyp">person_leg</div>
-        <select onchange="showExpBySelect(this)"> 
-            <option value="0">日本語</option>
-            <option value="1">汉语</option>
-        </select>
+
     </form>
     <div id="disp"></div>
 </body>
