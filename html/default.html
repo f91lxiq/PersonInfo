@@ -14,9 +14,9 @@
     <h1 class="dataTeyp">person_exp</h1>
     <form>
         <div class="dataTeyp">person_leg</div>
-        <select>
-            <option value="0">汉语</option>
-            <option value="1">日本語</option>
+        <select onchange="showExpBySelect(this)"> 
+            <option value="0">日本語</option>
+            <option value="1">汉语</option>
         </select>
     </form>
     <div id="disp"></div>

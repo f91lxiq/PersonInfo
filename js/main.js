@@ -1,6 +1,6 @@
 var xmlHttp;
 var data;
-function showExp() {
+function showExp(lengDiv) {
 
     if (window.XMLHttpRequest) {
         xmlHttp = new XMLHttpRequest();
@@ -12,8 +12,7 @@ function showExp() {
         }
     }
     xmlHttp.onreadystatechange = checkStatus;
-    xmlHttp.open("GET", "https://f91lxiq.github.io/PersonInfo/data/title.jp.json", true);
-
+    xmlHttp.open("GET", "https://f91lxiq.github.io/PersonInfo/data/title."+ lengDiv + ".json", true);
     xmlHttp.send(null);
 }
 
@@ -31,4 +30,9 @@ function checkStatus(showtype) {
         replaceWord(data);
     } else {
     }
+}
+
+function showExpBySelect(sel) {
+    var selValue = sel.value;
+    showExp(selValue);
 }
