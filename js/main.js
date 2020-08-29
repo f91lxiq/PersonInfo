@@ -12,7 +12,7 @@ function showExp() {
         }
     }
     xmlHttp.onreadystatechange = checkStatus;
-    xmlHttp.open("GET", "/data/title.jp.json", true);
+    xmlHttp.open("GET", "https://f91lxiq.github.io/PersonInfo/data/title.jp.json", true);
 
     xmlHttp.send(null);
 }
